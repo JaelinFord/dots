@@ -1,0 +1,71 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 28,
+
+  "modules-left": ["sway/workspaces"],
+
+  "modules-center": ["sway/window"],
+
+  "modules-right": [
+    "backlight",
+    "custom/separator",
+    "pulseaudio",
+    "custom/separator",
+    "battery",
+    "custom/separator",
+    "clock"
+  ],
+
+  /* --- Left Modules --- */
+
+  "sway/workspaces": {
+    "disable-scroll": true
+  },
+
+
+  /* --- Center Modules --- */
+
+  "sway/window": {
+    "max-length": 40,
+    "tooltip": false
+  },
+
+
+  /* --- Right Modules --- */
+
+  "pulseaudio": {
+    "format": "vol: {volume}%",
+    "format-muted": "vol: muted",
+    "scroll-step": 5,
+    "tooltip": false
+  },
+
+  "backlight": {
+    "device": "amdgpu_bl1",
+    "format": "bri: {percent}%",
+    "tooltip": false
+  },
+
+  "battery": {
+    "format": "bat: {capacity}%",
+    "format-charging": "󰂄  {capacity}%",
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "tooltip": false
+  },
+
+  "clock": {
+    "format": "{:%Y-%m-%d | %I:%M %p}",
+    "tooltip": false
+  },
+
+  "custom/separator": {
+    "format": "|",
+    "interval": "once",
+    "tooltip": false
+  }
+}
+

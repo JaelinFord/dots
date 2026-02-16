@@ -1,0 +1,53 @@
+* {
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 14px;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: #ffffff
+}
+
+/* Workspaces */
+#workspaces button {
+  padding: 0 6px;
+  color: #777777;
+}
+
+#workspaces button.focused {
+  color: #ffffff;
+}
+
+/* Center window title */
+#window {
+  font-weight: 500;
+  padding: 0 10px;
+  min-width: 0;
+}
+
+/* Right modules spacing */
+#pulseaudio,
+#backlight,
+#battery,
+#clock {
+  padding: 0 6px;
+}
+
+/* Separator styling */
+#custom-separator {
+  color: #ffffff;
+  padding: 0 4px;
+}
+
+/* Battery states */
+#battery.warning {
+  color: #ffcc00;
+}
+
+#battery.critical {
+  color: #ff5555;
+}
+
