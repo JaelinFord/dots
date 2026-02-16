@@ -3,18 +3,20 @@
   "position": "top",
   "height": 28,
 
-  "modules-left": ["sway/workspaces"],
+  "modules-left": [
+    "sway/workspaces",
+  ],
 
-  "modules-center": ["sway/window"],
+  "modules-center": ["clock"],
 
   "modules-right": [
+    "network",
+    "custom/separator",
     "backlight",
     "custom/separator",
     "pulseaudio",
     "custom/separator",
     "battery",
-    "custom/separator",
-    "clock"
   ],
 
   /* --- Left Modules --- */
@@ -26,30 +28,37 @@
 
   /* --- Center Modules --- */
 
-  "sway/window": {
-    "max-length": 40,
+  "clock": {
+    "format": "{:%Y-%m-%d - %I:%M %p}",
     "tooltip": false
   },
 
 
   /* --- Right Modules --- */
 
-  "pulseaudio": {
-    "format": "vol: {volume}%",
-    "format-muted": "vol: muted",
-    "scroll-step": 5,
+  "network": {
+    "format-wifi": "wifi:{essid} ",
+    "format-ethernet": "wifi:ethernet ",
+    "format-disconnected": "wifi:offline ",
     "tooltip": false
   },
 
   "backlight": {
     "device": "amdgpu_bl1",
-    "format": "bri: {percent}%",
+    "format": "bri:{percent}%",
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "format": "vol:{volume}%",
+    "format-muted": "vol:muted",
+    "scroll-step": 5,
     "tooltip": false
   },
 
   "battery": {
-    "format": "bat: {capacity}%",
-    "format-charging": "󰂄  {capacity}%",
+    "format": "bat:{capacity}%",
+    "format-charging": "󰂄 {capacity}%",
     "states": {
       "warning": 30,
       "critical": 15
@@ -57,10 +66,6 @@
     "tooltip": false
   },
 
-  "clock": {
-    "format": "{:%Y-%m-%d | %I:%M %p}",
-    "tooltip": false
-  },
 
   "custom/separator": {
     "format": "|",
